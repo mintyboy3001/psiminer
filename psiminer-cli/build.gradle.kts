@@ -1,6 +1,15 @@
 group = rootProject.group
 version = rootProject.version
+plugins {
+    // Add the IntelliJ Platform Plugin if not already present
+    id("org.jetbrains.intellij") 
+}
 
+// Configure the IntelliJ Platform Plugin to use Community Edition
+intellij {
+    version.set("2022.2.3")
+    type.set("IC") // IC = IntelliJ IDEA Community Edition
+}
 dependencies {
     implementation(project(":psiminer-core"))
 

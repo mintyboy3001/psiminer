@@ -12,4 +12,4 @@ interface JavaTreeTransformation : PsiTreeTransformation
 
 interface KotlinTreeTransformation : PsiTreeTransformation
 
-interface PhpTreeTransformation : PsiTreeTransformation
+

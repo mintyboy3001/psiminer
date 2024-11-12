@@ -10,7 +10,6 @@ import psi.Parser
 import psi.ParserException
 import psi.language.JavaHandler
 import psi.language.KotlinHandler
-import psi.language.PhpHandler
 import psi.printTree
 import psi.transformations.PsiTreeTransformation
 import storage.Storage
@@ -34,7 +33,6 @@ class Pipeline(
     private val languageHandler = when (language) {
         Language.Java -> JavaHandler()
         Language.Kotlin -> KotlinHandler()
-        Language.PHP -> PhpHandler()
     }
 
     private val parser = Parser(languageHandler, psiTreeTransformations, labelExtractor.granularityLevel)

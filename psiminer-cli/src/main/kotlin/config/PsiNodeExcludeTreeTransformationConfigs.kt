@@ -36,7 +36,6 @@ class ExcludeLanguageSymbolsTransformationConfig : PsiTreeTransformationConfig()
     override fun createTreeTransformation(language: Language): PsiTreeTransformation =
         when (language) {
             Language.Java -> ExcludeJavaSymbolsTransformation()
-            Language.PHP -> ExcludePhpSymbolsTransformation()
             else -> throw UnsupportedLanguageTransformation("language symbols", language.name)
         }
 }

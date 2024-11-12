@@ -4,7 +4,6 @@ import Language
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import psi.graphs.graphMiners.JavaGraphMiner
-import psi.graphs.graphMiners.PhpGraphMiner
 import storage.tree.JsonTreeStorage
 import storage.Storage
 import storage.graphs.JsonGraphStorage
@@ -52,7 +51,6 @@ class JsonGraphStorageConfig : StorageConfig() {
     override fun createStorage(outputDirectory: File, language: Language): Storage =
         when (language) {
             Language.Java -> JsonGraphStorage(outputDirectory, JavaGraphMiner())
-            Language.PHP -> JsonGraphStorage(outputDirectory, PhpGraphMiner())
             else -> throw UnsupportedStorageType("json graph", language.name)
         }
 }

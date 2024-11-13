@@ -71,5 +71,3 @@ open class KotlinPsiRequiredTest(source: String) : BasePsiRequiredTest(dataFolde
         const val ext = "kt"
     }
 }
-
-

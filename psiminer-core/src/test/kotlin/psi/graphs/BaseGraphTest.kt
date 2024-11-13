@@ -4,9 +4,7 @@ import BasePsiRequiredTest
 import com.intellij.openapi.editor.Document
 import com.intellij.psi.PsiDocumentManager
 import com.intellij.psi.PsiElement
-import com.intellij.psi.util.parentOfType
 import org.junit.jupiter.api.TestInstance
-import psi.language.LanguageHandler
 import java.io.File
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -66,4 +64,3 @@ abstract class BaseGraphTest(private val psiSourceFile: File) : BasePsiRequiredT
     class CorrectValueNotProvidedException(methodName: String, edgeType: String) :
             RuntimeException("No correct number of $edgeType edges for method $methodName provided")
 }
-
